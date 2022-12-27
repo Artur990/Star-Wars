@@ -1,5 +1,5 @@
 import React from "react";
 
-export const s = () => {
-  return <div>s</div>;
+export const Error = () => {
+  return <div>Error</div>;
 };

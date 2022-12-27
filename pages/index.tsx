@@ -3,20 +3,13 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import deved from "../public/dev-ed-wave.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { text } from "stream/consumers";
 import Link from "next/link";
 // const inter = Inter({ subsets: ["latin"] });
 import localForage from "localforage";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
-  const [data, setData] = useState<any>();
-  const foo = "hello world";
-  useEffect(() => {
-    localForage.setItem("myuniquekey", foo);
-    localForage.getItem("myuniquekey").then((res) => setData(res));
-  }, []);
-  console.log(data);
 
   return (
     <div className={darkMode ? "dark" : ""}>
