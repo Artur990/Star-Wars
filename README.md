@@ -1,8 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mój projekt:
 
-## Getting Started
-
-First, run the development server:
+## Technologie:
+	-React, TypeScript, Next.js, React Query, axios.
+## Funkcjionalności: 
+  -Pobranie postaci oraz tytuły filmów z Api.
+  -Wyświetlnie filmów w każdej postaci.
+  -Każdy film posiada możliwość dodania komentarza.
+## UI: 
+	-Tailwind CSS
+## Database: 
+	-Node.js
 
 ```bash
 npm run dev
