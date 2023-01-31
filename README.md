@@ -4,7 +4,7 @@
 	-React, TypeScript, Next.js, React Query, axios.
 ## Funkcjionalności: 
   -Pobranie postaci oraz tytuły filmów z Api.
-  -Wyświetlnie filmów w każdej postaci.
+  -W każdej postaci wyświetlają się filmy w, którj brała udział.
   -Każdy film posiada możliwość dodania komentarza.
 ## UI: 
 	-Tailwind CSS
@@ -16,4 +16,3 @@ npm run dev
 # or
 yarn dev
 ```
-## My Project, Next.js,TypeScript , API , Reacy Query, Tailwind, 
