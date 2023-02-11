@@ -1,8 +1,8 @@
-import React from "react";
-import { useCharacter, useMovie } from "../../actions/actions";
-const Film = ({ idd }: any) => {
-  const movie = useMovie(idd);
-  return <div>{movie?.data?.title}</div>;
-};
+import React from 'react'
+import { useMovie } from '../../actions/actions'
+const Film = ({ id }: { id: string }) => {
+  const movie = useMovie(id)
+  return <div>{movie?.data?.title}</div>
+}
 
-export default Film;
+export default Film

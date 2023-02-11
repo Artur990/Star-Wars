@@ -1,10 +1,9 @@
-import Link from "next/link";
-import React from "react";
-import { useCharacter, useMovie } from "../../actions/actions";
+import React from 'react'
+import { useCharacter } from '../../actions/actions'
 
-const Charakter = ({ idd }: any) => {
-  const character = useCharacter(idd);
-  return <div>{character?.data?.name}</div>;
-};
+const Charakter = ({ id }: { id: string }) => {
+  const character = useCharacter(id)
+  return <div>{character?.data?.name}</div>
+}
 
-export default Charakter;
+export default Charakter

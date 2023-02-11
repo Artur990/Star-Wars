@@ -9,4 +9,5 @@ npm run dev
 # or
 yarn dev
 ```
-## My Project, Next.js,TypeScript , API , Reacy Query, Tailwind, 
+
+## My Project, Next.js,TypeScript , API , Reacy Query, Tailwind,
