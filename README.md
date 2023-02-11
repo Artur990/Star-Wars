@@ -1,23 +1,19 @@
 # Mój projekt:
 
 ## Technologie:
-	-React, TypeScript, Next.js, React Query, axios.
+	-Next.js, TypeScript, React Query, Axios.
 ## Funkcjionalności: 
--Pobranie postaci oraz tytuły filmów z Api.
--W każdej postaci wyświetlają się filmy w, którj brała udział.
--Każdy film posiada możliwość dodania komentarza.
+	-Pobranie postaci oraz tytuły filmów z Api.
+	-W każdej postaci wyświetlają się filmy w, którj jest postacią.
+	-Każdy film posiada możliwość dodania komentarza.
 ## UI: 
 	-Tailwind CSS
 ## Database: 
 	-Node.js
+## API:
+	https://swapi.dev/api
 
 ```bash
 npm run dev
-# or
-yarn dev
-```
-<<<<<<< HEAD
 
-## My Project, Next.js,TypeScript , API , Reacy Query, Tailwind,
-=======
->>>>>>> ecf34174e7f9ebac1eed1522863af4aa431744ab
+```
