@@ -1,10 +1,10 @@
 import { rest } from 'msw'
 import React from 'react'
 import { server } from '../../../setupTests'
-import { renderWithClient } from '../../pages/utils/utils'
+import { renderWithClient } from '../mocks/utils'
 import Films from '../../../pages/films'
 
-describe('query component', () => {
+describe('query component films', () => {
   test('successful query component', async () => {
     const result = renderWithClient(<Films />)
 

@@ -1,17 +1,17 @@
-import { Character, GetCharaktersResults } from '../types/types'
-import { apiClient } from '../libs/axios'
+import { ICharacter, IGetCharaktersResults } from '../types/types'
+import { apiClient } from '../configs/axios'
 
 const getCharacters = async () => {
-  const res = await apiClient.get<GetCharaktersResults>('people')
+  const res = await apiClient.get<IGetCharaktersResults>('people')
   return res.data
 }
 
-const getChatacter = async (id: string) => {
-  const res = await apiClient.get<Character>(`people/${id}/`)
+const getCharacter = async (id: string) => {
+  const res = await apiClient.get<ICharacter>(`people/${id}/`)
   return res.data
 }
 
-export const CharaktersServices = {
+export const CharactersServices = {
   getCharacters,
-  getChatacter,
+  getCharacter,
 }

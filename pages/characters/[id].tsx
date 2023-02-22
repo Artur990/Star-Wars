@@ -4,15 +4,15 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { QueryClient, dehydrate } from '@tanstack/react-query'
 
-import { useCharacter } from '../../actions/actions'
+import { useCharacter } from '../../hook/hooks'
 import Film from '../../components/Film/Film'
-import { CharaktersServices } from '../../services/CharactersService'
+import { CharactersServices } from '../../services/CharactersService'
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const queryClient = new QueryClient()
   const { id } = ctx.query as { id: string }
   await queryClient.prefetchQuery(['Movies'], () =>
-    CharaktersServices.getChatacter(id)
+    CharactersServices.getCharacter(id)
   )
   return {
     props: {
@@ -25,10 +25,6 @@ const Character: NextPage = () => {
   const router = useRouter()
   const id = router.query.id as string
   const { data, isLoading, isError } = useCharacter(id)
-  console.log(data)
-  if (isLoading) {
-    return <div>Loading...</div>
-  }
   if (isLoading) {
     return (
       <div className="h-screen w-screen  bg-white p-2 font-poppins text-2xl font-bold  text-black  dark:bg-black  dark:text-white">
@@ -50,7 +46,7 @@ const Character: NextPage = () => {
           className="font-poppins text-xs text-blue-500 underline "
           href="/"
         >
-          Powrót
+          Back
         </Link>
       </h2>
       <h1 className="border-l-black text-center font-poppins text-2xl  text-black  dark:text-white">

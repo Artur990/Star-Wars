@@ -1,5 +1,5 @@
 import React from 'react'
-import { useCharacter } from '../../actions/actions'
+import { useCharacter } from '../../hook/hooks'
 
 const Charakter = ({ id }: { id: string }) => {
   const character = useCharacter(id)

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { useMovies, getUrlID } from '../../actions/actions'
+import { useMovies, getUrlID } from '../../hook/hooks'
 import { MoviesServices } from '../../services/MovieServices'
 import { QueryClient } from '@tanstack/react-query'
 import { dehydrate } from '@tanstack/query-core'
@@ -45,7 +45,7 @@ const Films = () => {
           className="font-poppins text-xs text-blue-500  underline"
           href="/"
         >
-          Powrót
+          Back
         </Link>
       </h2>
       <h1 className="font-poppins text-2xl  font-bold  text-black  dark:text-white">

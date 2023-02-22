@@ -2,9 +2,9 @@ import React from 'react'
 import { rest } from 'msw'
 import { server } from '../../../setupTests'
 import Characters from '../../../pages/characters'
-import { renderWithClient } from '../../pages/utils/utils'
+import { renderWithClient } from '../mocks/utils'
 
-describe('query component', () => {
+describe('query component characters', () => {
   test('successful query component', async () => {
     const result = renderWithClient(<Characters />)
 

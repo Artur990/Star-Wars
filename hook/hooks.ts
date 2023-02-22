@@ -1,9 +1,10 @@
-import { CommentsServie } from './../services/CommentServer'
-import type { Comments, CommentPost } from '../types/types'
+import { CommentsServie } from '../services/CommentServer'
+import type { TComments, ICommentPost } from '../types/types'
 import { MoviesServices } from '../services/MovieServices'
-import { CharaktersServices } from '../services/CharactersService'
+import { CharactersServices } from '../services/CharactersService'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import toast from 'react-hot-toast'
+
 const regex = /(\d+)\/$/
 export const getUrlID = (link: string) => {
   const match = link.match(regex)
@@ -19,15 +20,15 @@ export const useMovie = (id: string) => {
 }
 
 export const useCharacters = () => {
-  return useQuery(['Charakters'], () => CharaktersServices.getCharacters())
+  return useQuery(['Charakters'], () => CharactersServices.getCharacters())
 }
 
 export const useCharacter = (id: string) => {
-  return useQuery(['Charakter', id], () => CharaktersServices.getChatacter(id))
+  return useQuery(['Charakter', id], () => CharactersServices.getCharacter(id))
 }
 
 export const useGetComments = (id: string) => {
-  const query = useQuery<Comments>(['Comments'], () =>
+  const query = useQuery<TComments>(['Comments'], () =>
     CommentsServie.getComments()
   )
 
@@ -43,7 +44,7 @@ export const usePostComments = (id: string) => {
   const queryClient = useQueryClient()
 
   return useMutation(
-    (newTodo: CommentPost) => CommentsServie.postComments(id, newTodo),
+    (newTodo: ICommentPost) => CommentsServie.postComments(id, newTodo),
     {
       onSuccess: () => {
         toast.success('Your comment has been added')

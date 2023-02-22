@@ -1,13 +1,13 @@
-import { apiClient } from '../libs/axios'
-import { Movie, GetMoviesResults } from '../types/types'
+import { apiClient } from '../configs/axios'
+import { IMovie, IGetMoviesResults } from '../types/types'
 
 const getMoves = async () => {
-  const res = await apiClient.get<GetMoviesResults>('films')
+  const res = await apiClient.get<IGetMoviesResults>('films')
   return res.data
 }
 
 const getMove = async (id: string) => {
-  const res = await apiClient.get<Movie>(`films/${id}/`)
+  const res = await apiClient.get<IMovie>(`films/${id}/`)
   return res.data
 }
 

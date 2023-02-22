@@ -86,7 +86,7 @@ describe('query hook charakters', () => {
       wrapper: createWrapper(),
     })
     await waitFor(() => expect(result.current.isSuccess).toBe(true))
-    console.log(result.current)
+ 
     expect(result.current.data).toStrictEqual(dataCharacters)
   })
 

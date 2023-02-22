@@ -7,11 +7,7 @@ import { QueryClient } from '@tanstack/react-query'
 import { toast } from 'react-hot-toast'
 
 import { MoviesServices } from '../../services/MovieServices'
-import {
-  useMovie,
-  useGetComments,
-  usePostComments,
-} from '../../actions/actions'
+import { useMovie, useGetComments, usePostComments } from '../../hook/hooks'
 import Charakter from '../../components/charakter/Charakter'
 import Comment from '../../components/Comment'
 import { CommentsServie } from '../../services/CommentServer'
@@ -66,6 +62,14 @@ const Movie: NextPage = () => {
   }
   return (
     <div className="w-screen bg-white  p-2 dark:bg-black ">
+      <h2>
+        <Link
+          className="font-poppins text-xs text-blue-500 underline "
+          href="/"
+        >
+          Back
+        </Link>
+      </h2>
       <h1 className=" border-l-black text-center font-poppins text-3xl  text-black  dark:text-white">
         {data?.title}
       </h1>
@@ -102,7 +106,7 @@ const Movie: NextPage = () => {
         <form onSubmit={handlerSubmit}>
           <div className="flex justify-center">
             <textarea
-              className="dark:text-blac h-36   w-2/4  rounded-lg  bg-slate-800  font-poppins   text-white  opacity-75 hover:opacity-100 dark:bg-slate-300"
+              className="dark:text-blac h-36   w-2/4  rounded-lg  bg-slate-800  font-poppins   text-white opacity-75 hover:opacity-100 dark:bg-slate-300 dark:text-black"
               name="searchTerm"
             />
           </div>

@@ -3,15 +3,15 @@ import React from 'react'
 import Head from 'next/head'
 import { QueryClient, dehydrate } from '@tanstack/react-query'
 
-import { getUrlID, useCharacters } from '../../actions/actions'
-import { CharaktersServices } from '../../services/CharactersService'
+import { getUrlID, useCharacters } from '../../hook/hooks'
+import { CharactersServices } from '../../services/CharactersService'
 
 export async function getServerSideProps() {
   const queryClient = new QueryClient()
 
   await queryClient.prefetchQuery(
     ['Charakters'],
-    CharaktersServices.getCharacters
+    CharactersServices.getCharacters
   )
 
   return {
@@ -49,7 +49,7 @@ const Characters = () => {
           className="font-poppins text-xs  text-blue-500 underline "
           href="/"
         >
-          Powrót
+          Back
         </Link>
       </h2>
       <h1 className="font-poppins text-2xl  font-bold  text-black  dark:text-white">

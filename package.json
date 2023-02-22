@@ -22,10 +22,6 @@
     "axios": "^1.2.1",
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
-    "eslint": "8.30.0",
-    "eslint-config-next": "13.0.7",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
     "express": "^4.18.2",
     "firebase": "^9.15.0",
     "localforage": "^1.10.0",
@@ -55,7 +51,11 @@
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.2",
     "react-test-renderer": "^18.2.0",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.4",
+    "eslint": "8.30.0",
+    "eslint-config-next": "13.0.7",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
   },
   "extends": [
     "next",

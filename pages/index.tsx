@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import photo from '../assets/dev-ed-wave.png'
+import photo from '../public/dev-ed-wave.png'
 
 export default function Home() {
   return (
@@ -27,19 +27,3 @@ export default function Home() {
     </div>
   )
 }
-
-// <div className="h-screen w-screen p-6 bg-white dark:bg-black">
-//     <button
-//       className="dark:text-white text-black bg-sky-500 dark:bg-green-500"
-//       onClick={() => setColorMode(colorMode === "light" ? "dark" : "light")}
-//     >
-//       TOGGLE THEME ssss
-//     </button>
-//   </div>
-//   <Head>
-//     <title>Quiz Game</title>
-//     <meta name="description" content="Game" />
-//     <meta name="viewport" content="width=device-width, initial-scale=1" />
-//     <link rel="icon" href="/favicon.ico" />
-//   </Head>
-//   <main>{/* <MainPage /> */}</main>

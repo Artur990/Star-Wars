@@ -1,13 +1,13 @@
-export interface GetMoviesResults {
-  results: Movie[]
+export interface IGetMoviesResults {
+  results: IMovie[]
   isSuccess: any
   isError: any
 }
-export interface GetCharaktersResults {
-  results: Character[]
+export interface IGetCharaktersResults {
+  results: ICharacter[]
 }
 
-export interface Movie {
+export interface IMovie {
   title: string
   episode_id: number
   opening_crawl: string
@@ -15,7 +15,7 @@ export interface Movie {
   url: string
 }
 
-export interface Character {
+export interface ICharacter {
   name: string
   height: number
   skin_color: string
@@ -24,17 +24,17 @@ export interface Character {
   url: string
 }
 
-export interface Comments {
+export type TComments = {
   episode_id: number
   name: {
     id: number
     comment: string
   }[]
-}
-export interface CommentPost {
-  id: any
+}[]
+export interface ICommentPost {
+  id: Date
   comment: string
 }
-export interface ComentProps {
+export interface IComentProps {
   name: { id: number; comment: string }[]
 }

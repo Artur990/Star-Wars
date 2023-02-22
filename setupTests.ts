@@ -3,7 +3,7 @@ import '@testing-library/jest-dom'
 import { setupServer } from 'msw/node'
 
 import { setLogger } from 'react-query'
-import { handlers } from './test/pages/utils/utils'
+import { handlers } from './test/pages/mocks/utils'
 
 export const server = setupServer(...handlers)
 
