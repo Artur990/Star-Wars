@@ -2,9 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import photo from '../public/dev-ed-wave.png'
-
-export default function Home() {
+function Home() {
   return (
     <div>
       <Head>
@@ -21,9 +19,17 @@ export default function Home() {
            sm:h-96 sm:w-96
           "
         >
-          <Image src={photo} alt="" layout="fill" objectFit="cover" />
+          <Image
+            src="dev-ed-wave.png"
+            width={300}
+            height={300}
+            alt=""
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
       </div>
     </div>
   )
 }
+export default Home
