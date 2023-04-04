@@ -14,19 +14,19 @@ function Home() {
 
       <div className="flex  h-screen w-screen justify-center bg-white align-middle dark:bg-black">
         <div
-          className="relative mx-auto mt-10 h-56 w-56 overflow-hidden rounded-full border-black
-            bg-gradient-to-r from-cyan-500 to-teal-500
-           sm:h-96 sm:w-96
+          className="relative mx-auto mt-10 flex h-64 w-64 justify-center overflow-hidden
+            rounded-full border-black bg-gradient-to-r
+           from-cyan-500 to-teal-500 align-middle sm:h-96 sm:w-96
           "
         >
-          <Image
-            src="dev-ed-wave.png"
-            width={300}
-            height={300}
-            alt=""
-            layout="fill"
-            objectFit="cover"
-          />
+          {/* <Image
+            src="/dev-ed-wave.png"
+            width={250}
+            height={250}
+            alt="photo"
+            // layout="fill"
+            // objectFit="cover"
+          /> */}
         </div>
       </div>
     </div>

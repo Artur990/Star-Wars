@@ -22,7 +22,7 @@ const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
           <Toaster />
           <Component {...pageProps} />
 
-          <ReactQueryDevtools initialIsOpen={false} />
+          {/* <ReactQueryDevtools initialIsOpen={false} /> */}
         </Hydrate>
       </QueryClientProvider>
     </Layout>
