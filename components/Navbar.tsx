@@ -30,7 +30,7 @@ const Navbar = () => {
             </div>
             <div className="sm:hidden">
               {menu ? (
-                <div className="positon: fixed top-0 right-0 ">
+                <div className=" fixed top-0 right-0 ">
                   <ul className="w-60  rounded-bl-2xl   bg-slate-800 dark:bg-slate-400 ">
                     <li
                       className="p-1  text-center font-poppins  text-3xl text-white hover:bg-black  hover:opacity-90 dark:text-black dark:hover:bg-white
@@ -89,7 +89,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/films"
-                className="md-8 rounded-lg bg-gradient-to-r from-cyan-500  to-teal-500 px-3 py-1 text-black dark:text-white "
+                className="rounded-lg bg-gradient-to-r from-cyan-500  to-teal-500 px-3 py-1 text-black dark:text-white "
               >
                 Films
               </Link>
@@ -97,7 +97,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/characters"
-                className="md-8 rounded-lg bg-gradient-to-r from-cyan-500  to-teal-500 px-3 py-1 text-black dark:text-white "
+                className=" rounded-lg bg-gradient-to-r from-cyan-500  to-teal-500 px-3 py-1 text-black dark:text-white "
               >
                 Characters
               </Link>

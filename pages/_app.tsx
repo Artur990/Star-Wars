@@ -12,20 +12,20 @@ import {
 import { FC, useState } from 'react'
 import { Toaster } from 'react-hot-toast'
 
-const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps }: AppProps) => {
   const [queryClient] = useState(() => new QueryClient())
   const dehydratedState = dehydrate(queryClient)
   return (
-    <Layout>
-      <QueryClientProvider client={queryClient}>
-        <Hydrate state={pageProps.dehydratedState}>
-          <Toaster />
+    <QueryClientProvider client={queryClient}>
+      <Hydrate state={pageProps.dehydratedState}>
+        <Toaster />
+        <Layout>
           <Component {...pageProps} />
+        </Layout>
 
-          {/* <ReactQueryDevtools initialIsOpen={false} /> */}
-        </Hydrate>
-      </QueryClientProvider>
-    </Layout>
+        <ReactQueryDevtools initialIsOpen={false} />
+      </Hydrate>
+    </QueryClientProvider>
   )
 }
 export default App

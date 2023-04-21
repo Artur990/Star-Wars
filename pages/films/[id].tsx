@@ -16,9 +16,9 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const queryClient = new QueryClient()
   const { id } = ctx.query as { id: string }
   await queryClient.prefetchQuery(['Movies'], () => MoviesServices.getMove(id))
-  // await queryClient.prefetchQuery(['Comments'], () =>
-  // CommentsServie.getComments()
-  // )
+  await queryClient.prefetchQuery(['Comments'], () =>
+    CommentsServie.getComments()
+  )
   return {
     props: {
       dehydratedState: dehydrate(queryClient),
@@ -30,8 +30,8 @@ const Movie: NextPage = () => {
   const router = useRouter()
   const id = router.query.id as string
   const { data, isLoading, isError } = useMovie(id)
-  // const { newComent } = useGetComments(id)
-  // const mutation = usePostComments(id)
+  const { newComent } = useGetComments(id)
+  const mutation = usePostComments(id)
 
   const handlerSubmit = (e: any) => {
     e.preventDefault()
@@ -39,10 +39,10 @@ const Movie: NextPage = () => {
       toast.error('The message is empty')
       return
     }
-    // mutation.mutate({
-    //   id: new Date(),
-    //   comment: e.target.elements.searchTerm.value as string,
-    // })
+    mutation.mutate({
+      id: new Date(),
+      comment: e.target.elements.searchTerm.value as string,
+    })
     e.target.elements.searchTerm.value = ''
   }
 
@@ -122,9 +122,9 @@ const Movie: NextPage = () => {
         </form>
         <div className="border-b-1 mx-auto mt-5 mb-5 w-4/5 border border-black " />
         <div className=" flex flex-wrap justify-center   ">
-          {/* {newComent?.map((e) => {
+          {newComent?.map((e) => {
             return <Comment key={e.episode_id} {...e} />
-          })} */}
+          })}
         </div>
       </section>
     </div>

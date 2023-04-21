@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link'
 import { useMovies, getUrlID } from '../../hook/hooks'
 import { MoviesServices } from '../../services/MovieServices'
@@ -18,6 +18,21 @@ export async function getServerSideProps() {
 }
 
 const Films = () => {
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        // debugger
+        const res = await fetch('/api/hello')
+        const data = await res.json()
+
+        console.log(data)
+      } catch (error) {
+        console.error(error)
+      }
+    }
+    fetchData()
+  }, [])
+
   const { isLoading, data, isError } = useMovies()
   if (isLoading) {
     return (

@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import Navbar from '../components/Navbar'
 
 function Home() {
+  useEffect(() => {
+    async function fetchData() {
+      const res = await fetch('/api/Hendler')
+      const json = await res.json()
+      // setData(json)
+      console.log(json)
+    }
+
+    fetchData()
+  }, [])
   return (
     <div>
       <Head>
@@ -11,7 +22,6 @@ function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <div className="flex  h-[100%] w-screen justify-center bg-white align-middle dark:bg-black">
         <div
           className="relative mx-auto mt-10 flex h-64 w-64 justify-center overflow-hidden
@@ -19,7 +29,14 @@ function Home() {
            from-cyan-500 to-teal-500 align-middle sm:h-96 sm:w-96
           "
         >
-          <Image src="/dev-ed-wave.png" width={350} height={250} alt="photo" />
+          <Image
+            src="/dev-ed-wave.png"
+            width={350}
+            height={250}
+            alt="photo"
+            className="h-auto w-auto"
+            priority
+          />
         </div>
       </div>
     </div>
