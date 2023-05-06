@@ -46,12 +46,12 @@ export const usePostComments = (id: string) => {
   return useMutation(
     (newTodo: ICommentPost) => CommentsServie.postComments(id, newTodo),
     {
-      onSuccess: () => {
-        toast.success('Your comment has been added')
+      onSuccess: (e: any) => {
+        toast.success(e.message)
         queryClient.invalidateQueries(['Comments'])
       },
-      onError: () => {
-        toast.error('Something went wrong')
+      onError: (e: any) => {
+        toast.error(e.message)
       },
     }
   )

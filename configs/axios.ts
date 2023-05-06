@@ -5,5 +5,5 @@ export const apiClient = axios.create({
 })
 
 export const apiComments = axios.create({
-  baseURL: '/api/Hendler',
+  baseURL: '/api/handler',
 })

@@ -1,19 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import Navbar from '../components/Navbar'
 
 function Home() {
-  useEffect(() => {
-    async function fetchData() {
-      const res = await fetch('/api/Hendler')
-      const json = await res.json()
-      // setData(json)
-      console.log(json)
-    }
-
-    fetchData()
-  }, [])
   return (
     <div>
       <Head>
